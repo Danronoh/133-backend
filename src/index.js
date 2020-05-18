@@ -1,14 +1,22 @@
-const app = require('./app')
-const config = require('../src/config/config.json');
+import app from './app';
+import React from 'react'
+import ReactDom, { render } from 'react-dom'
+import Reactor from './react/Reactor'
 
 const startApp = async () => {
-  app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
-   
-  app.listen(config.app.port, () =>
-    console.log('Server listening on port 3000!'),
-  );
+  const header = document.querySelector('[data-app-name]');
+  if (!header) return;
+
+  const programName = await app();
+  header.textContent = programName;
 };
 
-startApp()
+document.addEventListener('DOMContentLoaded', startApp);
+
+
+// load react app too
+render(
+  <Reactor
+  />,
+  document.getElementById('team')
+)

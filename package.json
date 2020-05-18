@@ -17,7 +17,12 @@
     "test:watch": "jest --watch",
     "test:cover": "jest --coverage",
     "lint": "eslint \"src/**/*.js\"",
-    "start": "node ./src/index.js"
+    "start": "node index.js",
+    "dev": "parcel ./src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "engines": {
+    "node": "12.14.0"
   },
   "author": {
     "name": "Build For SDG",
@@ -33,9 +38,18 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@angular/core": "^9.1.4",
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
-    "mongoose": "^5.7.5"
+    "helmet": "^3.22.0",
+    "mongoose": "^5.7.5",
+    "mysql2": "^2.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-json-prettify": "^0.2.0",
+    "sequelize": "^5.21.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -45,7 +59,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.4.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
   },
   "browserslist": [
     "last 1 Chrome versions"
