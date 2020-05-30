@@ -21,12 +21,10 @@ exports.createComment= async(req,res)=>{
 }
 
 exports.getComments= async (req,res)=>{
-    try{
+   
     const post= await Post.findOne({_id:req.params.id}).populate( "comments");
     res.send(post);
-} catch (err) {
-    console.error(err.message);
-}
+
 };
 
 
