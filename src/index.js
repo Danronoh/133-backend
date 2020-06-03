@@ -1,6 +1,7 @@
 import app from './app';
 import React from 'react'
 import ReactDom, { render } from 'react-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import Reactor from './react/Reactor'
 
 const startApp = async () => {
@@ -11,12 +12,14 @@ const startApp = async () => {
   header.textContent = programName;
 };
 
-document.addEventListener('DOMContentLoaded', startApp);
+// document.addEventListener('DOMContentLoaded', startApp); not loading default app
 
 
 // load react app too
 render(
-  <Reactor
-  />,
-  document.getElementById('team')
-)
+    <HashRouter>
+      <Reactor
+      />
+    </HashRouter>,
+    document.getElementById('team')
+);

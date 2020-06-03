@@ -11,7 +11,7 @@ const app = express();
 
 
 // TODO MOVE THIs TO SETTINGS
-mongoose.connect('mongodb+srv://puritys:admin@cluster0-tyaxn.mongodb.net/test?retryWrites=true&w=majority',
+/*mongoose.connect('mongodb+srv://puritys:admin@cluster0-tyaxn.mongodb.net/test?retryWrites=true&w=majority',
 { useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false })
@@ -21,8 +21,8 @@ mongoose.connect('mongodb+srv://puritys:admin@cluster0-tyaxn.mongodb.net/test?re
   .catch((error) => {
     console.log('Unable to connect to MongoDB Atlas!');
     console.error(error);
-  });
-/*
+  });*/
+
 mongoose.connect(
   'mongodb+srv://nic:l53F7zl1LSdOcQWo@cluster0-haduu.mongodb.net/test?retryWrites=true&w=majority',
   {
@@ -31,7 +31,7 @@ mongoose.connect(
     useFindAndModify: false
   }
 )
-  .then(() => {});*/
+  .then(() => {});
 // .then(() => console.log('Connected to Db...'))
 // .catch((err) => console.log(`Could not connect to Mongo db${err}`));
 
@@ -60,7 +60,7 @@ app.use('/api/posts',postRoute);
 // app.use(error)
 require('./settings/prod')(app); // TODO :: only on prod
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 3000;
 
 const server = app.listen(port, () => {
   // console.log('app open on port :::::: ', port);

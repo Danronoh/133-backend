@@ -1,12 +1,23 @@
+@import "variables";
+@import "sections/header";
+@import "sections/content";
+@import "bootstrap";
+@import "../external/codepen";
+@import "codepen_overrides";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 #home {
   background: #63805f;
   font-size: 1em;
+  min-height: 100vh;
+  width: 100%;
+  //display: grid;
+  //justify-content: center;
 
   h1 {
     font-size: 1.4em;
