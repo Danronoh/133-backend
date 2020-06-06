@@ -4,11 +4,15 @@ const express = require('express');
 const router = express.Router();
 const postController= require('../../controllers/postController')
 const commentController= require('../../controllers/commentsController');
+const multer= require('../../middleware/multer');
+
+
+//posts
 router.get('/', postController.getAllPosts);
-router.post('/', postController.createPost);
+router.post('/', multer,postController.createPost);
 router.get('/:id', postController.getAllPosts);
-router.put('/:id', postController.updatePost);
-router.delete('/:id', postController.deletePost);
+router.put('/:id', multer,postController.updatePost);
+router.delete('/:id', multer, postController.deletePost);
 
 //comments
 router.post('/:id/comment', commentController.createComment);
