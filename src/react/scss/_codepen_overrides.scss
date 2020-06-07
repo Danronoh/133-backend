@@ -1,0 +1,21 @@
+
+#loader,
+#page_loader {
+  // loading page custom div attr
+  .loading_body {
+    height: 100vh; // set full height hide with gsap
+    justify-content: center;
+    background: map-get($colors, secondary_background);
+
+
+    h1 {
+      color: map-get($colors, bluebell);
+      margin-bottom: 1em;
+    }
+  }
+
+  .loading_body_hidden { // toggle hide body on page load
+    //display: none;
+    //z-index: -1;
+  }
+}
