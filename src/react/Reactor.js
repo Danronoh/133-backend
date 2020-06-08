@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, Link } from 'react-router-dom';
+import './animate'
+import './scss/main.scss';
+import './scss/pages.scss';
+
 import TransportItems from './page/TransportItems';
 import TransportDetails from './page/TransportDetails';
-import TransportApi from './page/TransportApi';
+import Api from './page/Api';
 import NotFound from './page/NotFound';
 import Home from './page/Home';
 import NavBar from './component/NavBar';
-import './animate'
-import './scss/main.scss';
+import User from "./page/User";
+import About from "./page/About";
+import AddItem from "./page/AddItem";
+import Forum from "./page/Forum";
 
 class Reactor extends Component {
 
@@ -27,7 +33,11 @@ class Reactor extends Component {
         <Switch>
           <Route path="/transport/:id" component={TransportDetails}/>
           <Route path="/transport-list/:filter?/:filtertwo?" component={TransportItems}/>
-          <Route path="/transport-api" component={TransportApi}/>
+          <Route path="/api" component={Api}/>
+          <Route path="/about" component={About}/>
+          <Route path="/forum" component={Forum}/>
+          <Route path="/add-item" component={AddItem}/>
+          <Route path="/user" component={User}/>
           <Route path="/not-found" component={NotFound}/>
           <Route path="/" component={Home}/>
           <Redirect to="/not-found" />

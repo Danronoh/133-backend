@@ -15,23 +15,11 @@ router.get('/', async (req, res) => {
 
   /* const transport = await Transport
     .find({ isPublished: true })
-    .skip((pageNumber -1) * pageSize)
-    .limit(pageSize)
-    .sort({title: 1})
-    .select({
-      title: 1,
-      owner: 1,
-      description: 1,
-      details: 1,
-      images: 1,
-    }); */
-
-  const transport = await Transport
-    .find({ isPublished: true })
     .skip((pageNumber - 1) * pageSize)
     .limit(pageSize)
-    .sort({ title: 1 });
+    .sort({ title: 1 }); */
 
+  const transport = await Transport.find();
   res.json(transport);
 });
 
@@ -49,16 +37,6 @@ router.get('/:id', async (req, res) => {
 // post rq create a transport item
 router.post('/', async (req, res) => {
   // const { body } = req; // TODO:: validate item
-
-  /* {
-    "title": "Test this toom,nmhjghjghkjgkjgjkgkjgjkgjkg",
-    "owner": "103",
-    "categories": ["One", "Two"],
-    "description": "Very descriptive..",
-    "details": "andress",
-    "images":["imgId1", "imgId2"] ,
-    "isPublished": true
-  } */
 
   let transport = new Transport(req.body);
 

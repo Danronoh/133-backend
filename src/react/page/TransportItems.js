@@ -5,6 +5,7 @@ import _ from 'lodash'
 import Loader from '../component/Loader';
 
 const axios = require('axios')
+let endpoint = window.location.host
 
 const refineApiData = require('../../services/refineApiData')
 
@@ -14,9 +15,13 @@ class TransportItems extends Component {
     items: []
   }
 
+
   loadData = async () => {
 
     const { data } = await refineApiData.getTransportItems('hello')
+    //console.log(`${endpoint}/api/transport/`)
+
+    //console.log(data);
 
     this.setState({
       items: data
