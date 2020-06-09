@@ -68,3 +68,25 @@
   }
 
 }
+
+
+// Home page
+.content {
+  .forum,
+   .home {
+
+     display: grid;
+     grid-template-columns: 60% 1fr;
+     //grid-gap: 3px;
+     align-items: center;
+     justify-content: center;
+   }
+
+  .user {
+    display: inline-block;
+  }
+
+  form {
+    display: inline-block;
+  }
+}

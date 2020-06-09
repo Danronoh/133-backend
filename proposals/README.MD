@@ -4,6 +4,11 @@ About This File
 * Getting Started
 * 
 
+TODO:: Please update ../src/services/docsServices.js that feeds our api documentation page here https://intense-dusk-42545.herokuapp.com/#/api
+-----
+Include your endpoints and what they do.
+
+
 INTRODUCTION
 ------------
 Please check readme on the root of this repo to learn more about the project.

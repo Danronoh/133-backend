@@ -10,16 +10,22 @@ const NavBar = () => {
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/login'>Login</Link>
+            <Link to='/user'>Login</Link>
           </li>
           <li>
             <Link to='/forum'>Forum</Link>
           </li>
           <li>
-            <Link to='/transport-list'>Transport list</Link>
+            <Link to='/add-item'>Add</Link>
           </li>
           <li>
-            <Link to='/transport-api'>Transport api </Link>
+            <Link to='/about'>About</Link>
+          </li>
+          <li>
+            <Link to='/transport-list'>Transport</Link>
+          </li>
+          <li>
+            <Link to='/api'>api </Link>
           </li>
         </ul>
       </nav>

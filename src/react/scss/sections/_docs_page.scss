@@ -1,0 +1,50 @@
+.documentation {
+  //background: red;
+  background: #90BE6D; // TODO::
+
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  align-items: stretch;
+
+  .doc-item {
+    margin-top: .5em;
+
+    pre {
+      display: grid;
+    }
+  }
+
+  .source-list {
+
+    margin-top: .5em;
+  }
+
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-top: .3em;
+
+      li {
+        cursor: pointer;
+      }
+    }
+
+    .Collapsible__trigger {
+
+      //background: map-get($colors, secondary_background);
+      cursor: pointer;
+      padding: .2em .3em;
+      font-size: 1.2em;
+      color: map-get($colors, primary_text);
+      border-bottom: 1px solid black;
+
+    }
+
+    .Collapsible {
+
+
+    }
+  }
+}
